@@ -27,29 +27,17 @@ export default function LandingPage() {
       <NavbarLayoutFloatingOverlay
       navItems={[
         {
-          name: "Home",
-          id: "/",
-        },
+          name: "Home",          id: "/"},
         {
-          name: "Services",
-          id: "/#services",
-        },
+          name: "Services",          id: "/#services"},
         {
-          name: "Track Package",
-          id: "/track",
-        },
+          name: "Track Package",          id: "/track"},
         {
-          name: "Become a Rider",
-          id: "/riders",
-        },
+          name: "Become a Rider",          id: "/riders"},
         {
-          name: "About Us",
-          id: "/about-us",
-        },
+          name: "About Us",          id: "/about-us"},
         {
-          name: "Contact",
-          id: "/contact",
-        },
+          name: "Contact",          id: "/contact"},
       ]}
       logoSrc="https://webuild-dev.s3.eu-north-1.amazonaws.com/default/no-image.jpg?id=hm12l6"
       logoAlt="MOEX LOGISTICS Logo"
@@ -62,9 +50,7 @@ export default function LandingPage() {
       useInvertedBackground={false}
       title="About MOEX LOGISTICS: Your Trusted Delivery Partner"
       description={[
-        "MOEX LOGISTICS is revolutionizing delivery services across Nigeria, starting with fast and reliable local deliveries in Ede and Osogbo, and expanding nationwide. Our mission is to provide an unparalleled logistics experience, integrating cutting-edge technology with a customer-first approach.",
-        "We are dedicated to building a platform that empowers both customers and riders. For customers, we offer transparent, real-time tracking, seamless booking, and a network of trusted riders. For our riders, we provide a flexible, lucrative marketplace supported by advanced tools for efficient job management and fair earnings.",
-      ]}
+        "MOEX LOGISTICS is revolutionizing delivery services across Nigeria, starting with fast and reliable local deliveries in Ede and Osogbo, and expanding nationwide. Our mission is to provide an unparalleled logistics experience, integrating cutting-edge technology with a customer-first approach.",        "We are dedicated to building a platform that empowers both customers and riders. For customers, we offer transparent, real-time tracking, seamless booking, and a network of trusted riders. For our riders, we provide a flexible, lucrative marketplace supported by advanced tools for efficient job management and fair earnings."]}
       showBorder={false}
     />
   </div>
@@ -76,28 +62,17 @@ export default function LandingPage() {
       useInvertedBackground={true}
       metrics={[
         {
-          id: "cities-served",
-          icon: Building,
-          title: "Cities Served",
-          value: "15+",
-        },
+          id: "cities-served",          icon: Building,
+          title: "Cities Served",          value: "15+"},
         {
-          id: "packages-delivered",
-          icon: Package,
-          title: "Packages Delivered",
-          value: "100K+",
-        },
+          id: "packages-delivered",          icon: Package,
+          title: "Packages Delivered",          value: "100K+"},
         {
-          id: "active-riders",
-          icon: Car,
-          title: "Active Riders",
-          value: "500+",
-        },
+          id: "active-riders",          icon: Car,
+          title: "Active Riders",          value: "500+"},
       ]}
       title="Our Journey So Far"
       description="Since our inception, MOEX LOGISTICS has been committed to setting new standards in the delivery industry."
-      imageSrc="http://img.b2bpic.net/free-photo/lightning-arrow-upward-icon-against-sky_23-2147910278.jpg"
-      imageAlt="Company milestones illustration"
     />
   </div>
 
@@ -109,49 +84,31 @@ export default function LandingPage() {
         {
           items: [
             {
-              label: "Home",
-              href: "/",
-            },
+              label: "Home",              href: "/"},
             {
-              label: "Services",
-              href: "/#services",
-            },
+              label: "Services",              href: "/#services"},
             {
-              label: "About Us",
-              href: "/about-us",
-            },
+              label: "About Us",              href: "/about-us"},
           ],
         },
         {
           items: [
             {
-              label: "Track Package",
-              href: "/track",
-            },
+              label: "Track Package",              href: "/track"},
             {
-              label: "Become a Rider",
-              href: "/riders",
-            },
+              label: "Become a Rider",              href: "/riders"},
             {
-              label: "Book a Delivery",
-              href: "/#booking",
-            },
+              label: "Book a Delivery",              href: "/#booking"},
           ],
         },
         {
           items: [
             {
-              label: "Contact Us",
-              href: "/contact",
-            },
+              label: "Contact Us",              href: "/contact"},
             {
-              label: "Privacy Policy",
-              href: "#",
-            },
+              label: "Privacy Policy",              href: "#"},
             {
-              label: "Terms of Service",
-              href: "#",
-            },
+              label: "Terms of Service",              href: "#"},
           ],
         },
       ]}
