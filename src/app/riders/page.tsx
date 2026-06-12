@@ -2,14 +2,100 @@
 
 import { ThemeProvider } from "@/providers/themeProvider/ThemeProvider";
 import ReactLenis from "lenis/react";
-import FeatureCardTwentySeven from '@/components/sections/feature/FeatureCardTwentySeven';
-import FooterLogoEmphasis from '@/components/sections/footer/FooterLogoEmphasis';
 import NavbarLayoutFloatingOverlay from '@/components/navbar/NavbarLayoutFloatingOverlay/NavbarLayoutFloatingOverlay';
-import PricingCardTwo from '@/components/sections/pricing/PricingCardTwo';
-import TeamCardEleven from '@/components/sections/team/TeamCardEleven';
-import { Award, Crown } from "lucide-react";
+import FooterLogoEmphasis from '@/components/sections/footer/FooterLogoEmphasis';
+import { useState } from 'react';
+import { BadgeCheck, Clock, DollarSign, MapPin, Package } from "lucide-react";
 
-export default function LandingPage() {
+export default function RiderDashboardPage() {
+  const [isOnline, setIsOnline] = useState(false);
+  const [activeJobs, setActiveJobs] = useState<Array<{ id: string; pickup: string; dropoff: string; status: 'pending' | 'accepted' }>>([
+    // { id: 'job1', pickup: '123 Main St, Ede', dropoff: '456 Oak Ave, Ede', status: 'pending' },
+  ]);
+  const [earnings, setEarnings] = useState(150.75); // Example earnings
+
+  const toggleOnlineStatus = () => {
+    setIsOnline(!isOnline);
+    if (!isOnline) {
+      // Simulate fetching new jobs when going online
+      setTimeout(() => {
+        setActiveJobs([
+          { id: 'job1', pickup: '123 Main St, Ede', dropoff: '456 Oak Ave, Ede', status: 'pending' },
+          { id: 'job2', pickup: '789 Elm St, Ede', dropoff: '101 Pine Rd, Ede', status: 'pending' },
+        ]);
+      }, 1000);
+    } else {
+      setActiveJobs([]); // Clear jobs when going offline, or manage as per business logic
+    }
+  };
+
+  const acceptJob = (jobId: string) => {
+    setActiveJobs(currentJobs =>
+      currentJobs.map(job =>
+        job.id === jobId ? { ...job, status: 'accepted' } : job
+      )
+    );
+    // Simulate API call for job acceptance
+    console.log(`Job ${jobId} accepted`);
+  };
+
+  const completeJob = (jobId: string) => {
+    setActiveJobs(currentJobs =>
+      currentJobs.filter(job => job.id !== jobId)
+    );
+    setEarnings(prev => prev + 10.50); // Example earning for a completed job
+    // Simulate API call for job completion
+    console.log(`Job ${jobId} completed`);
+  };
+
+  const dashboardNavItems = [
+    {
+      name: "Home",      id: "/"},
+    {
+      name: "Services",      id: "/#services"},
+    {
+      name: "Track Package",      id: "/track"},
+    {
+      name: "Become a Rider",      id: "/riders"},
+    {
+      name: "About Us",      id: "/about-us"},
+    {
+      name: "Contact",      id: "/contact"},
+  ];
+
+  const footerColumns = [
+    {
+      items: [
+        {
+          label: "Home",          href: "/"},
+        {
+          label: "Services",          href: "/#services"},
+        {
+          label: "About Us",          href: "/about-us"},
+      ],
+    },
+    {
+      items: [
+        {
+          label: "Track Package",          href: "/track"},
+        {
+          label: "Become a Rider",          href: "/riders"},
+        {
+          label: "Book a Delivery",          href: "/#booking"},
+      ],
+    },
+    {
+      items: [
+        {
+          label: "Contact Us",          href: "/contact"},
+        {
+          label: "Privacy Policy",          href: "#"},
+        {
+          label: "Terms of Service",          href: "#"},
+      ],
+    },
+  ];
+
   return (
     <ThemeProvider
         defaultButtonVariant="bounce-effect"
@@ -24,159 +110,106 @@ export default function LandingPage() {
         headingFontWeight="medium"
     >
       <ReactLenis root>
-  <div id="nav" data-section="nav">
-      <NavbarLayoutFloatingOverlay
-      navItems={[
-        {
-          name: "Home",          id: "/"},
-        {
-          name: "Services",          id: "/#services"},
-        {
-          name: "Track Package",          id: "/track"},
-        {
-          name: "Become a Rider",          id: "/riders"},
-        {
-          name: "About Us",          id: "/about-us"},
-        {
-          name: "Contact",          id: "/contact"},
-      ]}
-      logoSrc="https://webuild-dev.s3.eu-north-1.amazonaws.com/default/no-image.jpg?id=hm12l6"
-      logoAlt="MOEX LOGISTICS Logo"
-      brandName="MOEX LOGISTICS"
-    />
-  </div>
+        <div id="nav" data-section="nav">
+          <NavbarLayoutFloatingOverlay
+            navItems={dashboardNavItems}
+            logoSrc="https://webuild-dev.s3.eu-north-1.amazonaws.com/default/no-image.jpg?id=hm12l6"
+            logoAlt="MOEX LOGISTICS Logo"
+            brandName="MOEX LOGISTICS"
+          />
+        </div>
 
-  <div id="rider-marketplace-features" data-section="rider-marketplace-features">
-      <FeatureCardTwentySeven
-      animationType="slide-up"
-      textboxLayout="default"
-      useInvertedBackground={false}
-      features={[
-        {
-          id: "register-verify",          title: "Easy Registration & Verification",          descriptions: [
-            "Quickly sign up and get verified with our streamlined process."],
-          imageSrc: "http://img.b2bpic.net/free-photo/mobile-app-location-digital-art_23-2151762859.jpg",          imageAlt: "rider app dashboard ui design"},
-        {
-          id: "flexible-work",          title: "Flexible Online/Offline Status",          descriptions: [
-            "Manage your availability and accept jobs that fit your schedule."],
-          imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/no-image.jpg?id=hm12l6&_wi=2",          imageAlt: "rider app dashboard ui design"},
-        {
-          id: "delivery-requests",          title: "Receive Nearby Delivery Requests",          descriptions: [
-            "Get instant notifications for jobs in your immediate vicinity."],
-          imageSrc: "http://img.b2bpic.net/free-photo/cityscape-istanbul-turkey-photo-from-bird-s-eye-view_1153-5898.jpg?_wi=2",          imageAlt: "rider app dashboard ui design"},
-        {
-          id: "google-maps-nav",          title: "Integrated Google Maps Navigation",          descriptions: [
-            "Effortlessly navigate to pickup and delivery locations with real-time routing."],
-          imageSrc: "http://img.b2bpic.net/free-photo/high-speed-blurred-city-scape_272375-5411.jpg?_wi=2",          imageAlt: "rider app dashboard ui design"},
-        {
-          id: "earnings-withdrawal",          title: "View Earnings & Easy Withdrawal",          descriptions: [
-            "Track your income and withdraw your earnings securely and conveniently."],
-          imageSrc: "http://img.b2bpic.net/free-photo/closeup-drone-flying-green-field-forest_181624-61188.jpg?_wi=2",          imageAlt: "rider app dashboard ui design"},
-        {
-          id: "performance-tracking",          title: "Track Delivery Performance",          descriptions: [
-            "Monitor your success rate, ratings, and completed jobs to optimize your work."],
-          imageSrc: "http://img.b2bpic.net/free-photo/red-semi-truck-driving-dusty-desert-highway-sunset_23-2152031813.jpg?_wi=2",          imageAlt: "rider app dashboard ui design"},
-      ]}
-      title="Join the MOEX LOGISTICS Rider Community"
-      description="Become a part of our elite delivery network. Enjoy flexible work, competitive earnings, and cutting-edge tools designed for your success."
-    />
-  </div>
+        <main className="min-h-screen py-24 px-4 md:px-8 lg:px-16 container mx-auto">
+          <h1 className="text-4xl font-bold text-center mb-12 text-foreground">Rider Dashboard</h1>
 
-  <div id="rider-earnings" data-section="rider-earnings">
-      <PricingCardTwo
-      animationType="slide-up"
-      textboxLayout="default"
-      useInvertedBackground={true}
-      plans={[
-        {
-          id: "standard-rider",          badge: "Standard",          badgeIcon: Award,
-          price: "80% Commission",          subtitle: "Keep most of your earnings",          buttons: [
-            {
-              text: "Join Standard",              href: "/riders#register"},
-          ],
-          features: [
-            "Standard job priority",            "Weekly payouts",            "Access to basic support",            "Flexible hours",            "Ede & Osogbo deliveries"],
-        },
-        {
-          id: "premium-rider",          badge: "Premium",          badgeIcon: Crown,
-          price: "85% Commission",          subtitle: "Unlock higher earning potential",          buttons: [
-            {
-              text: "Become Premium",              href: "/riders#register"},
-          ],
-          features: [
-            "Priority job access",            "Daily payouts",            "24/7 Premium support",            "Nationwide opportunities",            "Exclusive bonuses"],
-        },
-      ]}
-      title="Maximize Your Earnings as a MOEX Rider"
-      description="Choose a plan that suits your goals and start earning more with every delivery you complete."
-    />
-  </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Status Toggle */}
+            <div className="bg-card p-6 rounded-lg shadow-md flex flex-col items-center">
+              <h2 className="text-2xl font-semibold mb-4 text-foreground">Online Status</h2>
+              <button
+                onClick={toggleOnlineStatus}
+                className={`px-6 py-3 rounded-full text-lg font-medium transition-colors duration-300 ${
+                  isOnline
+                    ? 'bg-green-500 hover:bg-green-600 text-white'
+                    : 'bg-red-500 hover:bg-red-600 text-white'
+                }`}
+              >
+                {isOnline ? 'Go Offline' : 'Go Online'}
+              </button>
+              <p className={`mt-4 text-xl font-bold ${isOnline ? 'text-green-400' : 'text-red-400'}`}>
+                {isOnline ? 'You are Online' : 'You are Offline'}
+              </p>
+            </div>
 
-  <div id="our-rider-team" data-section="our-rider-team">
-      <TeamCardEleven
-      animationType="slide-up"
-      textboxLayout="default"
-      useInvertedBackground={false}
-      groups={[
-        {
-          id: "all-riders",          groupTitle: "Ede & Osogbo Teams",          members: [
-            {
-              id: "rider-1",              title: "Ayo Dele",              subtitle: "Lead Rider, Ede",              detail: "5000+ Deliveries",              imageSrc: "http://img.b2bpic.net/free-photo/happy-good-looking-african-entrepreneur-riding-bike-urban-setting-his-way-office-successful-dark-skinned-employee-enjoying-city-ride-black-bicycle-commuting-work-summer-day_273609-871.jpg",              imageAlt: "Ayo Dele, Lead Rider"},
-            {
-              id: "rider-2",              title: "Chioma Nnadi",              subtitle: "Senior Rider, Osogbo",              detail: "3500+ Deliveries",              imageSrc: "http://img.b2bpic.net/free-photo/front-view-young-female-courier-yellow-shirt-red-cape-holding-package-notepad-smiling-blue-space-job_140725-29145.jpg",              imageAlt: "Chioma Nnadi, Senior Rider"},
-            {
-              id: "rider-3",              title: "Emeka Obi",              subtitle: "Rider Team Lead",              detail: "2000+ Deliveries",              imageSrc: "http://img.b2bpic.net/free-photo/young-african-american-delivery-man-wearing-red-polo-shirt-cap-holding-stack-pizza-boxes-showing-smartphone-hand-camera-with-smile-face-isolated-orange_141793-9811.jpg",              imageAlt: "Emeka Obi, Rider Team Lead"},
-            {
-              id: "rider-4",              title: "Fatima Musa",              subtitle: "Expert Rider",              detail: "4000+ Deliveries",              imageSrc: "http://img.b2bpic.net/free-photo/male-photographer-exploring-urban-environment-with-grunge-aesthetic_23-2150943508.jpg",              imageAlt: "Fatima Musa, Expert Rider"},
-            {
-              id: "rider-5",              title: "Idris Bello",              subtitle: "Dispatch Specialist",              detail: "2500+ Deliveries",              imageSrc: "http://img.b2bpic.net/free-photo/portrait-smiling-african-american-female-courier-making-delivery-looking-camera_637285-2096.jpg",              imageAlt: "Idris Bello, Dispatch Specialist"},
-          ]
-        },
-      ]}
-      title="Meet Our Dedicated Riders"
-      description="Our riders are the heartbeat of MOEX LOGISTICS, committed to fast, safe, and friendly deliveries."
-    />
-  </div>
+            {/* Earnings Tracker */}
+            <div className="bg-card p-6 rounded-lg shadow-md flex flex-col items-center justify-center">
+              <DollarSign className="w-12 h-12 text-primary-cta mb-4" />
+              <h2 className="text-2xl font-semibold mb-2 text-foreground">Total Earnings</h2>
+              <p className="text-5xl font-extrabold text-primary-cta">₦{earnings.toFixed(2)}</p>
+            </div>
 
-  <div id="footer" data-section="footer">
-      <FooterLogoEmphasis
-      logoSrc="https://webuild-dev.s3.eu-north-1.amazonaws.com/default/no-image.jpg?id=hm12l6"
-      logoAlt="MOEX LOGISTICS Logo"
-      columns={[
-        {
-          items: [
-            {
-              label: "Home",              href: "/"},
-            {
-              label: "Services",              href: "/#services"},
-            {
-              label: "About Us",              href: "/about-us"},
-          ],
-        },
-        {
-          items: [
-            {
-              label: "Track Package",              href: "/track"},
-            {
-              label: "Become a Rider",              href: "/riders"},
-            {
-              label: "Book a Delivery",              href: "/#booking"},
-          ],
-        },
-        {
-          items: [
-            {
-              label: "Contact Us",              href: "/contact"},
-            {
-              label: "Privacy Policy",              href: "#"},
-            {
-              label: "Terms of Service",              href: "#"},
-          ],
-        },
-      ]}
-      logoText="MOEX LOGISTICS"
-    />
-  </div>
+            {/* Active Jobs Summary */}
+            <div className="bg-card p-6 rounded-lg shadow-md flex flex-col items-center justify-center">
+              <Package className="w-12 h-12 text-accent mb-4" />
+              <h2 className="text-2xl font-semibold mb-2 text-foreground">Active Jobs</h2>
+              <p className="text-5xl font-extrabold text-accent">{activeJobs.length}</p>
+            </div>
+          </div>
+
+          {/* Active Jobs Display */}
+          <div className="mt-16 bg-card p-8 rounded-lg shadow-lg">
+            <h2 className="text-3xl font-semibold mb-8 text-foreground">Current Deliveries</h2>
+            {activeJobs.length === 0 ? (
+              <p className="text-center text-lg text-foreground-lighter">No active jobs at the moment. Go online to see new requests!</p>
+            ) : (
+              <div className="space-y-6">
+                {activeJobs.map((job) => (
+                  <div key={job.id} className="border border-background-accent p-6 rounded-lg flex flex-col md:flex-row justify-between items-center bg-background-accent/20">
+                    <div className="text-foreground flex-grow text-center md:text-left mb-4 md:mb-0">
+                      <p className="text-lg font-medium flex items-center justify-center md:justify-start">
+                        <MapPin className="mr-2 text-primary-cta" size={20} /> Pickup: {job.pickup}
+                      </p>
+                      <p className="text-lg font-medium mt-2 flex items-center justify-center md:justify-start">
+                        <MapPin className="mr-2 text-secondary-cta" size={20} /> Dropoff: {job.dropoff}
+                      </p>
+                      <p className="text-base text-foreground-lighter mt-2">Status: <span className="capitalize font-semibold">{job.status}</span></p>
+                    </div>
+                    <div className="flex flex-col sm:flex-row gap-4">
+                      {job.status === 'pending' && isOnline && (
+                        <button
+                          onClick={() => acceptJob(job.id)}
+                          className="px-5 py-2 bg-primary-cta text-white rounded-md hover:bg-primary-cta/80 transition-colors duration-200 flex items-center justify-center"
+                        >
+                          <BadgeCheck className="mr-2" size={20} /> Accept Job
+                        </button>
+                      )}
+                      {job.status === 'accepted' && (
+                        <button
+                          onClick={() => completeJob(job.id)}
+                          className="px-5 py-2 bg-secondary-cta text-white rounded-md hover:bg-secondary-cta/80 transition-colors duration-200 flex items-center justify-center"
+                        >
+                          <Clock className="mr-2" size={20} /> Mark as Complete
+                        </button>
+                      )}
+                      {!isOnline && job.status === 'pending' && (
+                         <span className="text-sm text-center md:text-right text-foreground-lighter">Go online to accept jobs.</span>
+                      )}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+        </main>
+
+        <div id="footer" data-section="footer">
+          <FooterLogoEmphasis
+            logoSrc="https://webuild-dev.s3.eu-north-1.amazonaws.com/default/no-image.jpg?id=hm12l6"
+            logoAlt="MOEX LOGISTICS Logo"
+            columns={footerColumns}
+            logoText="MOEX LOGISTICS"
+          />
+        </div>
       </ReactLenis>
     </ThemeProvider>
   );
