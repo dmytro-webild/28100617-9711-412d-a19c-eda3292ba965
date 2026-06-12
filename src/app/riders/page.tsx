@@ -59,23 +59,23 @@ export default function LandingPage() {
         {
           id: "flexible-work",          title: "Flexible Online/Offline Status",          descriptions: [
             "Manage your availability and accept jobs that fit your schedule."],
-          imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/no-image.jpg?id=hm12l6",          imageAlt: "rider app dashboard ui design"},
+          imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/no-image.jpg?id=hm12l6&_wi=2",          imageAlt: "rider app dashboard ui design"},
         {
           id: "delivery-requests",          title: "Receive Nearby Delivery Requests",          descriptions: [
             "Get instant notifications for jobs in your immediate vicinity."],
-          imageSrc: "http://img.b2bpic.net/free-photo/cityscape-istanbul-turkey-photo-from-bird-s-eye-view_1153-5898.jpg",          imageAlt: "rider app dashboard ui design"},
+          imageSrc: "http://img.b2bpic.net/free-photo/cityscape-istanbul-turkey-photo-from-bird-s-eye-view_1153-5898.jpg?_wi=2",          imageAlt: "rider app dashboard ui design"},
         {
           id: "google-maps-nav",          title: "Integrated Google Maps Navigation",          descriptions: [
             "Effortlessly navigate to pickup and delivery locations with real-time routing."],
-          imageSrc: "http://img.b2bpic.net/free-photo/high-speed-blurred-city-scape_272375-5411.jpg",          imageAlt: "rider app dashboard ui design"},
+          imageSrc: "http://img.b2bpic.net/free-photo/high-speed-blurred-city-scape_272375-5411.jpg?_wi=2",          imageAlt: "rider app dashboard ui design"},
         {
           id: "earnings-withdrawal",          title: "View Earnings & Easy Withdrawal",          descriptions: [
             "Track your income and withdraw your earnings securely and conveniently."],
-          imageSrc: "http://img.b2bpic.net/free-photo/closeup-drone-flying-green-field-forest_181624-61188.jpg",          imageAlt: "rider app dashboard ui design"},
+          imageSrc: "http://img.b2bpic.net/free-photo/closeup-drone-flying-green-field-forest_181624-61188.jpg?_wi=2",          imageAlt: "rider app dashboard ui design"},
         {
           id: "performance-tracking",          title: "Track Delivery Performance",          descriptions: [
             "Monitor your success rate, ratings, and completed jobs to optimize your work."],
-          imageSrc: "http://img.b2bpic.net/free-photo/red-semi-truck-driving-dusty-desert-highway-sunset_23-2152031813.jpg",          imageAlt: "rider app dashboard ui design"},
+          imageSrc: "http://img.b2bpic.net/free-photo/red-semi-truck-driving-dusty-desert-highway-sunset_23-2152031813.jpg?_wi=2",          imageAlt: "rider app dashboard ui design"},
       ]}
       title="Join the MOEX LOGISTICS Rider Community"
       description="Become a part of our elite delivery network. Enjoy flexible work, competitive earnings, and cutting-edge tools designed for your success."
