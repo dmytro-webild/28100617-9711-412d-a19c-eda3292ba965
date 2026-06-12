@@ -82,7 +82,7 @@ export default function LandingPage() {
           href: "/riders",
         },
       ]}
-      imageSrc="http://img.b2bpic.net/free-photo/cityscape-istanbul-turkey-photo-from-bird-s-eye-view_1153-5898.jpg"
+      imageSrc="http://img.b2bpic.net/free-photo/cityscape-istanbul-turkey-photo-from-bird-s-eye-view_1153-5898.jpg?_wi=1"
       imageAlt="Modern logistics illustration with delivery riders and map"
       mediaAnimation="slide-up"
       fixedMediaHeight={true}
@@ -153,7 +153,7 @@ export default function LandingPage() {
           descriptions: [
             "Get your package delivered anywhere in Ede within 5 hours.",
           ],
-          imageSrc: "http://img.b2bpic.net/free-photo/high-speed-blurred-city-scape_272375-5411.jpg",
+          imageSrc: "http://img.b2bpic.net/free-photo/high-speed-blurred-city-scape_272375-5411.jpg?_wi=1",
           imageAlt: "Local delivery rider in city",
         },
         {
@@ -162,7 +162,7 @@ export default function LandingPage() {
           descriptions: [
             "Dedicated and rapid delivery service for university campuses.",
           ],
-          imageSrc: "http://img.b2bpic.net/free-photo/closeup-drone-flying-green-field-forest_181624-61188.jpg",
+          imageSrc: "http://img.b2bpic.net/free-photo/closeup-drone-flying-green-field-forest_181624-61188.jpg?_wi=1",
           imageAlt: "Delivery on university campus",
         },
         {
@@ -171,7 +171,7 @@ export default function LandingPage() {
           descriptions: [
             "Reliable and secure package transport between states.",
           ],
-          imageSrc: "http://img.b2bpic.net/free-photo/red-semi-truck-driving-dusty-desert-highway-sunset_23-2152031813.jpg",
+          imageSrc: "http://img.b2bpic.net/free-photo/red-semi-truck-driving-dusty-desert-highway-sunset_23-2152031813.jpg?_wi=1",
           imageAlt: "Cargo truck on highway",
         },
         {

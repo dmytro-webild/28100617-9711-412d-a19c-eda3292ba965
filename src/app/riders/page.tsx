@@ -70,7 +70,7 @@ export default function LandingPage() {
           descriptions: [
             "Quickly sign up and get verified with our streamlined process.",
           ],
-          imageSrc: "http://img.b2bpic.net/free-photo/mobile-app-location-digital-art_23-2151762859.jpg",
+          imageSrc: "http://img.b2bpic.net/free-photo/mobile-app-location-digital-art_23-2151762859.jpg?_wi=1",
           imageAlt: "rider app dashboard ui design",
         },
         {
@@ -79,7 +79,7 @@ export default function LandingPage() {
           descriptions: [
             "Manage your availability and accept jobs that fit your schedule.",
           ],
-          imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/no-image.jpg?id=hm12l6",
+          imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/no-image.jpg?id=hm12l6&_wi=2",
           imageAlt: "rider app dashboard ui design",
         },
         {
@@ -88,7 +88,7 @@ export default function LandingPage() {
           descriptions: [
             "Get instant notifications for jobs in your immediate vicinity.",
           ],
-          imageSrc: "http://img.b2bpic.net/free-photo/cityscape-istanbul-turkey-photo-from-bird-s-eye-view_1153-5898.jpg",
+          imageSrc: "http://img.b2bpic.net/free-photo/cityscape-istanbul-turkey-photo-from-bird-s-eye-view_1153-5898.jpg?_wi=3",
           imageAlt: "rider app dashboard ui design",
         },
         {
@@ -97,7 +97,7 @@ export default function LandingPage() {
           descriptions: [
             "Effortlessly navigate to pickup and delivery locations with real-time routing.",
           ],
-          imageSrc: "http://img.b2bpic.net/free-photo/high-speed-blurred-city-scape_272375-5411.jpg",
+          imageSrc: "http://img.b2bpic.net/free-photo/high-speed-blurred-city-scape_272375-5411.jpg?_wi=3",
           imageAlt: "rider app dashboard ui design",
         },
         {
@@ -106,7 +106,7 @@ export default function LandingPage() {
           descriptions: [
             "Track your income and withdraw your earnings securely and conveniently.",
           ],
-          imageSrc: "http://img.b2bpic.net/free-photo/closeup-drone-flying-green-field-forest_181624-61188.jpg",
+          imageSrc: "http://img.b2bpic.net/free-photo/closeup-drone-flying-green-field-forest_181624-61188.jpg?_wi=3",
           imageAlt: "rider app dashboard ui design",
         },
         {
@@ -115,13 +115,13 @@ export default function LandingPage() {
           descriptions: [
             "Monitor your success rate, ratings, and completed jobs to optimize your work.",
           ],
-          imageSrc: "http://img.b2bpic.net/free-photo/red-semi-truck-driving-dusty-desert-highway-sunset_23-2152031813.jpg",
+          imageSrc: "http://img.b2bpic.net/free-photo/red-semi-truck-driving-dusty-desert-highway-sunset_23-2152031813.jpg?_wi=3",
           imageAlt: "rider app dashboard ui design",
         },
       ]}
       title="Join the MOEX LOGISTICS Rider Community"
       description="Become a part of our elite delivery network. Enjoy flexible work, competitive earnings, and cutting-edge tools designed for your success."
-      imageSrc="http://img.b2bpic.net/free-photo/mobile-app-location-digital-art_23-2151762859.jpg"
+      imageSrc="http://img.b2bpic.net/free-photo/mobile-app-location-digital-art_23-2151762859.jpg?_wi=2"
       imageAlt="Rider dashboard UI showing job requests and map"
     />
   </div>
@@ -229,7 +229,7 @@ export default function LandingPage() {
               imageAlt: "Idris Bello, Dispatch Specialist",
             },
           ],
-          imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/no-image.jpg?id=hm12l6",
+          imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/no-image.jpg?id=hm12l6&_wi=3",
           imageAlt: "african delivery rider motorcycle",
         },
       ]}
