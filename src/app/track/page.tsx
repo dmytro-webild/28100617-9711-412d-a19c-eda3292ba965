@@ -57,23 +57,23 @@ export default function LandingPage() {
         {
           id: "live-status",          title: "Live Status Updates",          descriptions: [
             "Receive notifications when your package is picked up, in transit, and delivered."],
-          imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/no-image.jpg?id=hm12l6",          imageAlt: "real time package tracking ui"},
+          imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/no-image.jpg?id=hm12l6&_wi=1",          imageAlt: "real time package tracking ui"},
         {
           id: "google-maps-location",          title: "Google Maps Location",          descriptions: [
             "View the precise location of your package on an interactive map."],
-          imageSrc: "http://img.b2bpic.net/free-photo/cityscape-istanbul-turkey-photo-from-bird-s-eye-view_1153-5898.jpg",          imageAlt: "real time package tracking ui"},
+          imageSrc: "http://img.b2bpic.net/free-photo/cityscape-istanbul-turkey-photo-from-bird-s-eye-view_1153-5898.jpg?_wi=1",          imageAlt: "real time package tracking ui"},
         {
           id: "eta",          title: "Estimated Time of Arrival (ETA)",          descriptions: [
             "Get accurate predictions for when your package will arrive."],
-          imageSrc: "http://img.b2bpic.net/free-photo/high-speed-blurred-city-scape_272375-5411.jpg",          imageAlt: "real time package tracking ui"},
+          imageSrc: "http://img.b2bpic.net/free-photo/high-speed-blurred-city-scape_272375-5411.jpg?_wi=1",          imageAlt: "real time package tracking ui"},
         {
           id: "rider-info",          title: "Rider Information",          descriptions: [
             "Access rider name, contact details, and rating for transparency."],
-          imageSrc: "http://img.b2bpic.net/free-photo/closeup-drone-flying-green-field-forest_181624-61188.jpg",          imageAlt: "real time package tracking ui"},
+          imageSrc: "http://img.b2bpic.net/free-photo/closeup-drone-flying-green-field-forest_181624-61188.jpg?_wi=1",          imageAlt: "real time package tracking ui"},
         {
           id: "call-chat-rider",          title: "Call or Chat with Rider",          descriptions: [
             "Direct communication with your rider for any urgent queries."],
-          imageSrc: "http://img.b2bpic.net/free-photo/red-semi-truck-driving-dusty-desert-highway-sunset_23-2152031813.jpg",          imageAlt: "real time package tracking ui"},
+          imageSrc: "http://img.b2bpic.net/free-photo/red-semi-truck-driving-dusty-desert-highway-sunset_23-2152031813.jpg?_wi=1",          imageAlt: "real time package tracking ui"},
       ]}
       title="Real-Time Package Tracking & Live Rider View"
       description="Stay informed every step of the way with our advanced tracking system. See your package on a live map, get real-time updates, and know your rider."
