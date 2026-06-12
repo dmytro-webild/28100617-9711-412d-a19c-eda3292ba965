@@ -68,7 +68,7 @@ export default function LandingPage() {
           descriptions: [
             "Instantly retrieve your package status with a unique tracking ID.",
           ],
-          imageSrc: "http://img.b2bpic.net/free-photo/human-hand-holding-mobile-phone-with-map-gps-navigation-screen_23-2147837116.jpg",
+          imageSrc: "http://img.b2bpic.net/free-photo/human-hand-holding-mobile-phone-with-map-gps-navigation-screen_23-2147837116.jpg?_wi=1",
           imageAlt: "real time package tracking ui",
         },
         {
@@ -77,7 +77,7 @@ export default function LandingPage() {
           descriptions: [
             "Receive notifications when your package is picked up, in transit, and delivered.",
           ],
-          imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/no-image.jpg?id=hm12l6",
+          imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/no-image.jpg?id=hm12l6&_wi=1",
           imageAlt: "real time package tracking ui",
         },
         {
@@ -86,7 +86,7 @@ export default function LandingPage() {
           descriptions: [
             "View the precise location of your package on an interactive map.",
           ],
-          imageSrc: "http://img.b2bpic.net/free-photo/cityscape-istanbul-turkey-photo-from-bird-s-eye-view_1153-5898.jpg",
+          imageSrc: "http://img.b2bpic.net/free-photo/cityscape-istanbul-turkey-photo-from-bird-s-eye-view_1153-5898.jpg?_wi=2",
           imageAlt: "real time package tracking ui",
         },
         {
@@ -95,7 +95,7 @@ export default function LandingPage() {
           descriptions: [
             "Get accurate predictions for when your package will arrive.",
           ],
-          imageSrc: "http://img.b2bpic.net/free-photo/high-speed-blurred-city-scape_272375-5411.jpg",
+          imageSrc: "http://img.b2bpic.net/free-photo/high-speed-blurred-city-scape_272375-5411.jpg?_wi=2",
           imageAlt: "real time package tracking ui",
         },
         {
@@ -104,7 +104,7 @@ export default function LandingPage() {
           descriptions: [
             "Access rider name, contact details, and rating for transparency.",
           ],
-          imageSrc: "http://img.b2bpic.net/free-photo/closeup-drone-flying-green-field-forest_181624-61188.jpg",
+          imageSrc: "http://img.b2bpic.net/free-photo/closeup-drone-flying-green-field-forest_181624-61188.jpg?_wi=2",
           imageAlt: "real time package tracking ui",
         },
         {
@@ -113,13 +113,13 @@ export default function LandingPage() {
           descriptions: [
             "Direct communication with your rider for any urgent queries.",
           ],
-          imageSrc: "http://img.b2bpic.net/free-photo/red-semi-truck-driving-dusty-desert-highway-sunset_23-2152031813.jpg",
+          imageSrc: "http://img.b2bpic.net/free-photo/red-semi-truck-driving-dusty-desert-highway-sunset_23-2152031813.jpg?_wi=2",
           imageAlt: "real time package tracking ui",
         },
       ]}
       title="Real-Time Package Tracking & Live Rider View"
       description="Stay informed every step of the way with our advanced tracking system. See your package on a live map, get real-time updates, and know your rider."
-      imageSrc="http://img.b2bpic.net/free-photo/human-hand-holding-mobile-phone-with-map-gps-navigation-screen_23-2147837116.jpg"
+      imageSrc="http://img.b2bpic.net/free-photo/human-hand-holding-mobile-phone-with-map-gps-navigation-screen_23-2147837116.jpg?_wi=2"
       imageAlt="Mobile UI showing real-time package tracking"
     />
   </div>
